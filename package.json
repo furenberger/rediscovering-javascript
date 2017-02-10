@@ -1,0 +1,16 @@
+{
+  "name": "flickr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "flickrapi": "^0.6.0",
+    "node-flickr": "^1.0.0"
+  }
+}
