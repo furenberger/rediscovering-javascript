@@ -9,19 +9,32 @@ let canVote = function(name, age) {
   }
 };
 
-let getVoters = function(arr) {
-  let len = arr.length;
+let getVoters = function(voters) {
   let validVoters = [];
 
-  for(let i =0; i<len; i++){
-    console.log(arr[i]);
-    let cur = arr[i];
-    if(canVote(cur[0],cur[1])){
-      validVoters.push(cur[0]);
-    }
-  }
-  return validVoters;
+  // voters.forEach(voter => {
+  //     if(canVote(voter[0],voter[1])){
+  //         validVoters.push(voter[0]);
+  //     }
+  // });
 
+  voters.forEach(voter => {
+      canVote(voter[0],voter[1]) ? validVoters.push(voter[0]) : null;
+  });
+
+  // validVoters = voters.reduce(function(voterList,currentVoter){
+  //     if(!canVote(currentVoter[0], currentVoter[1])){
+  //         return voterList;
+  //     }
+  //     voterList.push(currentVoter[0]);
+  //     return voterList;
+  // },[]);
+
+  // validVoters =  voters
+  //       .filter(voter => canVote(voter[0], voter[1]))
+  //       .map(voter => voter[0]);
+
+  return validVoters;
 };
 
 
